@@ -1,0 +1,34 @@
+Q. What is Python?
+A. It is a high-level interpreted programming language known for its simplicity and readability. It was created by Guido Van Rossum in 1991.
+
+Q. Why Use Python?
+A.  -> Easy to Learn and Use
+    -> Versatile and Powerful
+    -> Large Community and Rich Ecosystem
+    -> High Demand in Job markets (AI and Data Science)
+
+Q. What is Python?
+A. It is a high-level interpreted programming language known for its simplicity and readability. It was created by Guido Van Rossum in 1991.
+
+Q. Why Use Python?
+A.  -> Easy to Learn and Use
+    -> Versatile and Powerful
+    -> Large Community and Rich Ecosystem
+    -> High Demand in Job markets (AI and Data Science)
+
+Compiler vs Interpreter:
+
+1. compiler translates the whole program at once.
+1. an interpreter translates line by line at a time.
+
+2. it is fast.
+2. it is slower.
+
+3. it consumes less time.
+3. it consumes more time.
+
+4. more efficient
+4. less efficient
+
+5. they usually large in size
+5. they usually smaller in size
