@@ -1,0 +1,46 @@
+Paragraph: 
+Indian cuisine offers a rich and diverse array of vegetarian dishes, reflecting the country's cultural and regional variations. Staples like lentils, rice, and a variety of fresh vegetables form the foundation of many meals. Dishes such as dal (lentil stew), sabzi (vegetable curry), and roti (unleavened bread) are commonplace. Spices play a crucial role, with ingredients like turmeric, cumin, coriander, and garam masala imparting unique flavors. South Indian cuisine features dishes like dosa (fermented crepe), idli (steamed rice cakes), and sambar (spicy lentil soup). North Indian cuisine is famous for dishes like paneer tikka (grilled cheese), chole (chickpea curry), and aloo gobi (potato and cauliflower curry). Street foods such as samosas, bhel puri, and pav bhaji are popular across the country. Many Indian sweets, including gulab jamun, jalebi, and barfi, are also vegetarian. Each region offers its own specialties, ensuring a vast and exciting culinary landscape for vegetarians to explore.
+
+> Maggie Tasks:
+Extract the first sentence of the paragraph.
+Extract the last sentence of the paragraph.
+Extract the word "lentils" from the paragraph.
+Extract the first five words of the paragraph.
+Extract the last five words of the paragraph.
+Extract the phrase "South Indian cuisine features dishes like dosa".
+Extract all the words between "coriander" and "idli".
+Extract the name of three North Indian dishes.
+Extract the names of all South Indian dishes mentioned.
+Extract the name of the first street food mentioned.
+Extract the phrase "unique flavors" from the paragraph.
+Extract the names of all spices mentioned in the paragraph.
+Extract the phrase "Indian sweets, including gulab jamun, jalebi, and barfi".
+Extract the phrase "North Indian cuisine is famous for dishes".
+Extract the phrase "foundation of many meals".
+Extract the first mention of the word "curry".
+Extract the phrase "reflecting the country's cultural and regional variations".
+Extract the phrase "North Indian cuisine is famous for dishes like paneer tikka".
+Extract the phrase "spices play a crucial role".
+Extract the phrase "Each region offers its own specialties".
+
+> 56-Bhog Tasks:
+Extract the first sentence without using the split method.
+Extract the last sentence without using the split method.
+Extract the phrase "rich and diverse" from the first sentence.
+Extract the phrase "lentil stew" without using the find method.
+Extract the word "lentils" in reverse order.
+Extract every second word in the paragraph.
+Extract the first word of each sentence in the paragraph.
+Extract the last word of each sentence in the paragraph.
+Extract the paragraph in reverse order.
+Extract every third character from the paragraph.
+Extract the first and last word of the paragraph.
+Extract all words containing the letter 'e'.
+Extract the paragraph without the first and last word.
+Extract all occurrences of the word "Indian" and reverse them.
+Extract the phrase "dal (lentil stew), sabzi (vegetable curry), and roti" without using the split or find method.
+Extract the names of dishes that contain the letter 'a'.
+Extract the first and last sentence, and join them into a new string.
+Extract the words "fresh vegetables form" and reverse the order of these words.
+Extract every word that starts with a consonant.
+Extract all the capital letters in the paragraph.
