@@ -1,0 +1,123 @@
+1. Count the number of occurrences of a specific character in a string.
+
+   Input: sentence = "Hello, how are you?", character = 'o'
+
+   Output: Count of 'o' in sentence: 3
+
+2. Check if a string starts with a given substring.
+
+   Input: text = "Python programming"
+
+   Output: 
+   
+   Does the string start with 'Python'? True
+   Does the string start with 'java'? False
+   
+
+3. Find the index of the first occurrence of a substring within a string.
+
+   Input: text = "Hello, how are you?", substring = "how"
+
+   Output: Index of 'how' in text: 7
+
+4. Replace all occurrences of a substring with another substring in a string.
+
+   Input: text = "I like ice cream and ice cream likes me.", old = "ice cream", new = "gelato"
+
+   Output: "I like gelato and gelato likes me."
+
+5. Convert all characters in a string to uppercase.
+
+   Input: text = "Hello, World!"
+
+   Output: "HELLO, WORLD!"
+
+6. Convert all characters in a string to lowercase.
+
+   Input: text = "Hello, World!"
+
+   Output: "hello, world!"
+
+7. Capitalize the first character of each word in a string.
+
+   Input: text = "hello world"
+
+   Output: "Hello World"
+
+8. Check if a string consists only of alphanumeric characters.
+
+   Input: text = "Hello123"
+
+   Output: Is 'Hello123' alphanumeric? True
+
+9. Remove leading and trailing whitespace characters from a string.
+
+   Input: text = "   Hello, World!   "
+
+   Output: "Hello, World!"
+
+10. Split a string into substrings based on a delimiter.
+
+    Input: text = "apple,banana,orange"
+
+    Output: ['apple', 'banana', 'orange']
+
+11. Join a list of strings into a single string with a delimiter.
+
+    Input: words = ['apple', 'banana', 'orange'], delimiter = ', '
+
+    Output: "apple, banana, orange"
+
+12. Swap the cases of all characters in a string.
+
+    Input: text = "Hello, World!"
+
+    Output: "hELLO, wORLD!"
+
+13. Check if a string ends with a specified suffix.
+
+    Input: text = "Hello, World!", suffix = "World!"
+
+    Output: Does 'Hello, World!' end with 'World!'? True
+
+14. Reverse a string.
+
+    Input: text = "Hello, World!"
+
+    Output: "!dlroW ,olleH"
+
+15. Strip characters from the left side of a string.
+
+    Input: text = "   Hello, World!   "
+
+    Output: "Hello, World!   "
+
+16. Strip characters from the right side of a string.
+
+    Input: text = "   Hello, World!   "
+
+    Output: "   Hello, World!"
+
+17. Check if a string contains only numeric characters.
+
+    Input: text = "12345"
+
+    Output: Is '12345' numeric? True
+
+18. Find the position of the last occurrence of a substring in a string.
+
+    Input: text = "Hello, World, World!", substring = "World"
+
+    Output: Last occurrence of 'World' starts at index: 13
+
+19. Extract digits from a string.
+
+    Input: text = "Hello 123 World 456!"
+
+    Output: "123456"
+
+20. Count the number of words in a string.
+
+    Input: text = "Hello, how are you?"
+
+    Output: Number of words in text: 4

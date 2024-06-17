@@ -69,4 +69,13 @@
 # print("'", "royal technosoft".rjust(50), "'", sep="")
 # print("royal technosoft".rsplit("tech"))
 # print("royal technosoft".rpartition(" "))
-# S
+
+# print("royal technosoft".startswith("roy"))
+# print("royal Technosoft".split("Tech"))
+# print("Lorem ipsum \ndolor sit amet consectetur \n\nadipisicing elit. Error iusto, quam culpa odit non, quae, facilis perspiciatis praesentium optio possimus nisi totam? ".splitlines())
+# print("^^^^^^^^^^^^^^-^^---$-----^^----^-0----&--------Dhairya Patel-^^---$-----^^----^-0----&--------^^^^^^^^^^^^".strip("-^$"))
+# print("dhairya Patel".swapcase())
+
+# print("dHAIRYA patel".title())
+# print("dhairya Patel".upper())
+# print("11001".zfill(8))
