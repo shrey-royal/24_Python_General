@@ -121,3 +121,64 @@
     Input: text = "Hello, how are you?"
 
     Output: Number of words in text: 4
+
+More Added:
+
+1. Problem Statement 1:
+   Given a sentence, return a new string where the first letter of each word is capitalized and the rest of the letters are in lowercase.
+   - Sample Input: "hello WORLD"
+   - Sample Output: "Hello World"
+
+2. Problem Statement 2:
+   Given a paragraph of text, count the number of times the word "data" appears, regardless of its case.
+   - Sample Input: "Data is the new oil. Many companies analyze data to gain insights. DATA science is a growing field."
+   - Sample Output: 3
+
+3. Problem Statement 3:
+   Given a string containing a mixture of letters, numbers, and special characters, encode the string using UTF-8 encoding and return the encoded result.
+   - Sample Input: "Café ☕"
+   - Sample Output: b'Caf\xc3\xa9 \xe2\x98\x95'
+
+4. Problem Statement 4:
+   Write a function that checks if a given string starts with the substring "Hello" and ends with the substring "World".
+   - Sample Input: "Hello, beautiful World"
+   - Sample Output: True
+   - Sample Input: "Hi there, World"
+   - Sample Output: False
+
+5. Problem Statement 5:
+   Given a list of words separated by commas in a string, return a new string where each word is surrounded by square brackets.
+   - Sample Input: "apple,banana,cherry"
+   - Sample Output: "[apple],[banana],[cherry]"
+
+6. Problem Statement 6:
+   Write a function that takes a file path as a string and extracts the file extension (e.g., "document.pdf" should return "pdf").
+   - Sample Input: "report.final.docx"
+   - Sample Output: "docx"
+
+7. Problem Statement 7:
+   Given a sentence, return the index of the first occurrence of the word "Python". If the word is not found, return -1.
+   - Sample Input: "I am learning Python programming."
+   - Sample Output: 14
+   - Sample Input: "I love coding."
+   - Sample Output: -1
+
+8. Problem Statement 8:
+   Write a function that takes a string and a character, and returns the string with all occurrences of the character replaced by an asterisk (*).
+   - Sample Input: "hello world", "o"
+   - Sample Output: "hell* w*rld"
+
+9. Problem Statement 9:
+   Given a string with tab-separated values, convert it to a string with comma-separated values.
+   - Sample Input: "name\tage\tcity"
+   - Sample Output: "name,age,city"
+
+10. Problem Statement 10:
+    Write a function that takes a multiline string and returns a list of strings, where each string is a single line from the original multiline string.
+    - Sample Input:
+      ```
+      Hello world
+      This is a test
+      Python is fun
+      ```
+    - Sample Output: ["Hello world", "This is a test", "Python is fun"]
