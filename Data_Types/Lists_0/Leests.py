@@ -79,7 +79,7 @@ indian_veggies = [
 
 #methods
 ########################################################
-# indian_veggies.append("Bell Pepper (Capsicum)", )
+# indian_veggies.append("Bell Pepper (Capsicum)")
 # print(indian_veggies)
 ########################################################
 # print(indian_veggies.count("Spinach (Palak)"))
@@ -105,4 +105,32 @@ indian_veggies = [
 
 # print(indian_veggies)
 ########################################################
-# E
+# new_list = ["Bell Pepper (Capsicum)", "Khaman (!veggie)", ["abcd", "xyz"]]
+# indian_veggies.extend(new_list)
+# print(indian_veggies)
+########################################################
+
+# print(len(indian_veggies), end="\n\n")
+# indian_veggies.insert(1, "Bell Pepper (Capsicum)")
+
+# print(indian_veggies)
+
+# print(indian_veggies.index("Turnip (Shalgam)", -2))
+########################################################
+
+# print(indian_veggies.pop(37), indian_veggies, sep="\n")
+########################################################
+
+# indian_veggies.reverse()
+# print(indian_veggies)
+
+# print(indian_veggies, end="\n\n\n\n\n")
+# indian_veggies.remove("Raw Mango (Keri)")
+# print(indian_veggies)
+########################################################
+
+# indian_veggies.sort()   # ascending
+# indian_veggies.sort(reverse=True)   # descending
+# print(indian_veggies)
+########################################################
+
