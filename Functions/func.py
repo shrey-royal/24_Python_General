@@ -52,10 +52,52 @@ def function_name(argument/s):
 # print(greet(input("Enter your name: ")))
 ######################################################################
 
-def addition(a, b):
-    return a+b
+# def addition(a, b):
+#     return a+b
 
-print(addition(2, 3))
+# print(addition(2, 3))
 
 
-# Default Parameters
+# Default parameters
+
+# def addition(a, b=0):
+#     print(f"{a} + {b} = {a+b}")
+
+# addition(34, 34)
+# addition(34)
+
+# smol praktis
+# Problem Statement: Create a function 'greet_user' that takes two parameters: 'name' (a string) and 'greeting' (a string). The greeting parameter should have a default value of "Hello". The function should print a message in the format: "greeting, name!". If no greeting is provided, it should use the default value.
+
+# def greet_user(name,greeting="hello"):
+#     print(f'"{greeting}, {name}!"')
+
+# greet_user('baburao','good afternoon')
+# greet_user('baburao')
+######################################################################
+
+# keyword arguments
+
+# def addition(a: int | None = 0, b=0):
+#     print(f"{a} + {b} = {a+b}")
+
+# addition(b=23, a=1)
+# addition(b=23)
+
+
+# print("this", "is", "a", "firecracker!", end='___')
+######################################################################
+
+# Recursion Function
+
+def factorial(num=0):
+    # base condition
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 1
+    
+    # recursion
+    return num * factorial(num-1)
+
+print(factorial(5))
