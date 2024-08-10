@@ -65,4 +65,22 @@ print(pairs)
 # filteredList = list(filter(lambda elem: max(elem[0], elem[1]) > 7, pairs))
 # print(filteredList)
 
-# sorted, reduce
+# -----------------------------------------------------------------------------
+
+# //sorted()
+# myList = [67, 56, 43, 23, 435, 456, 67, 3, 23, 23, 2]
+# sortedList = list(filter(lambda x: x%2 == 0, sorted(myList)))
+# sortedList = sorted(myList, key=lambda x: -x)
+
+# sortedList = sorted(pairs, key=lambda x: x[0])
+# print(sortedList)
+
+# fruits = [(1, '🍉'), (2, '🍒'), (3, '🍎'), (4, '🍅')]
+# sortedFruits = sorted(fruits, key=lambda x: x[0])
+# print(sortedFruits)
+
+num_list = [23, 345, 234, 56, 23, 45, 567]
+s1 = sorted(num_list, key=lambda x: x)
+s2 = sorted(num_list, key=lambda x: x%10)
+print(s1)
+print(s2)
