@@ -34,8 +34,8 @@
 
 import random
 
-pairs = [(random.randint(0, 10), random.randint(0, 10)) for _ in range(5)]
-print(pairs)
+# pairs = [(random.randint(0, 10), random.randint(0, 10)) for _ in range(5)]
+# print(pairs)
 
 # map(function, iterable) -> used to process data (work with any function who returns some data)
 
@@ -79,8 +79,44 @@ print(pairs)
 # sortedFruits = sorted(fruits, key=lambda x: x[0])
 # print(sortedFruits)
 
-num_list = [23, 345, 234, 56, 23, 45, 567]
-s1 = sorted(num_list, key=lambda x: x)
-s2 = sorted(num_list, key=lambda x: x%10)
-print(s1)
-print(s2)
+# num_list = [23, 345, 234, 56, 23, 45, 567]
+# s1 = sorted(num_list, key=lambda x: x)
+# s2 = sorted(num_list, key=lambda x: x%10)
+# print(s1)
+# print(s2)
+
+# -----------------------------------------------------------------------------
+
+# //reduce(function, sequence, initializer(optional)): apply function on all elems of sequence
+# from functools import reduce
+
+# def max(a, b):
+#     return a if a>b else b
+
+# myList = [211, 4, 6, 8, 10, 11]
+# print(reduce(max, myList))
+# pairs = [random.randint(0, 10) for _ in range(5)]
+# print(pairs)
+# print(reduce(lambda x, y: x*y, pairs))
+
+# # Since all are false, false is returned
+# print (any([False, False, False, False]))
+
+# # Here the method will short-circuit at the
+# # second item (True) and will return True.
+# print (any([False, True, False, False]))
+
+# # Here the method will short-circuit at the
+# # first (True) and will return True.
+# print (any([True, False, False, False]))
+
+
+# print(all([False, False, False, False]))
+# print(all([False, False, False, True]))
+# print(all([True, True, True, True]))
+# print(all([True, False, True, True]))
+
+multiples_of_6 = list(not (i % 6) for i in range(1, 10))
+print(multiples_of_6)
+print(any(multiples_of_6))  #or
+print(all(multiples_of_6))  #and
