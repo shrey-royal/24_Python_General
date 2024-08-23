@@ -64,13 +64,21 @@ print(result)
 ########################################################
 # **kwargs -> keyword arguments
 
-def connect(**connection_info):
-    print(type(connection_info))
-    print(connection_info)
+# def connect(**connection_info):
+#     print(type(connection_info))
+#     print(connection_info)
 
-connect(server='localhost', port=8080, user='admin', password='root')
+# connect(server='localhost', port=8080, user='admin', password='root')
 
 # config = {'server':'localhost', 'port':8080, 'user':'admin', 'password':'root'}
 
 # connect(**config)
 # connect(connection_info=[1, 2, 3])
+
+########################################################
+# type hint
+
+def say_hi(name: str) -> str:
+    return f"Hi {name}"
+
+print(say_hi(123))
