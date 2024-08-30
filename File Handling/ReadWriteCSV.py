@@ -86,12 +86,45 @@ hence, we use DictReader class
 #         print(f"The area of {line['name']} is {line['area']} km2")
 # ------------------------------------------------------------------
 
-col_names = ['country_name', 'area', 'code2', 'code3']
+# col_names = ['country_name', 'area', 'code2', 'code3']
 
-with open('country.csv', 'r') as f:
-    csv_reader = csv.DictReader(f, col_names)
+# with open('country.csv', 'r') as f:
+#     csv_reader = csv.DictReader(f, col_names)
 
-    next(csv_reader)
+#     next(csv_reader)
 
-    for line in csv_reader:
-        print(f"The area of {line['country_name']} is {line['area']} km2")
+#     for line in csv_reader:
+#         print(f"The area of {line['country_name']} is {line['area']} km2")
+# ------------------------------------------------------------------
+
+# header = ['name', 'area', 'country_code2', 'country_code3']
+# data = [
+#     ['Albania', 28748, 'AL', 'ALB'],
+#     ['Algeria', 2381741, 'DZ', 'DZA'],
+#     ['American Samoa', 199, 'AS', 'ASM'],
+#     ['Andorra', 468, 'AD', 'AND'],
+#     ['Angola', 1246700, 'AO', 'AGO']
+# ]
+
+# with open('countries.csv', 'w', encoding='UTF8', newline='') as f:
+#     writer = csv.writer(f)
+
+#     writer.writerow(header)
+#     writer.writerows(data)
+# ------------------------------------------------------------------
+
+# Renaming/Deleting a file
+
+import os
+
+# os.rename(src, dst): syntax
+print("Before")
+try:
+    os.rename("countries.csv", "NoFile.csv")
+    # os.remove("NoFile.csv")
+except FileNotFoundError as e:
+    print(e)
+except FileExistsError as e:
+    print(e)
+
+print("After")
