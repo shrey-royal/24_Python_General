@@ -1,0 +1,23 @@
+-> Object-Oriented Programming (OOP) in Python
+
+Object-Oriented Programming (OOP) is a programming paradigm that uses "objects" to represent data and methods. It allows developers to create classes that act as blueprints for objects, encapsulating data and functions that operate on that data. Python is an object-oriented language, and OOP is a fundamental concept in Python programming.
+
+-> Key Concepts of OOP
+
+-> Classes and Objects
+- Class: A class is a blueprint for creating objects. It defines a set of attributes and methods that the created objects can use.
+- Object: An object is an instance of a class. It is created using the class and can access the class's attributes and methods.
+
+# Defining a class
+class Dog:
+    # Class attribute
+    species = "Canine"
+
+    # Constructor method
+    def __init__(self, name, age):
+        # Instance attributes
+        self.name = name
+        self.age = age
+
+# Creating an object (instance of the class)
+my_dog = Dog("Buddy", 5)
