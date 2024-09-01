@@ -1,11 +1,11 @@
 class Student:
     # attributes
-    rollNo = 0
-    name = ""
-    grade = 0
+    rollNo = None
+    name = None
+    grade = None
 
 
-    # methods
+    # methods - instance methods
     def scanStudent(self, rno: int, n: str, grd: int) -> None:
         self.rollNo = rno
         self.name = n
@@ -16,7 +16,7 @@ class Student:
         print(f"Name: {self.name}")
         print(f"Grade: {self.grade}")
 
-
+"""
 s = Student()   # object
 
 # s.rollNo = 101
@@ -37,3 +37,18 @@ s.printStudentDetails()
 s1 = Student()
 # s1.scanStudent(102, "Krish", 7)
 s1.printStudentDetails()
+"""
+
+s: object   # object
+s = Student()   # instance
+
+s.scanStudent(102, "Mithil", 4)
+s.marks = 32+1  # created a new attribute specifically for s(current) instance
+
+s.printStudentDetails()
+print(f"Marks: {s.marks}")
+
+s1 = Student()
+
+s1.printStudentDetails()
+print(f"Marks: {s1.marks}")

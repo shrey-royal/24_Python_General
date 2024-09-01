@@ -21,3 +21,8 @@ class Dog:
 
 # Creating an object (instance of the class)
 my_dog = Dog("Buddy", 5)
+
+
+obj_student = None  # object
+
+obj_student = Student() # instance (it is object only but with memory allocated to the object)
