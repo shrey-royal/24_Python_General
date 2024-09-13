@@ -4,6 +4,8 @@ syntax:
     property(fget=None, fset=none, fdel=None, doc=None)
 """
 
+from pprint import pprint
+
 class Person:
     def __init__(self, name: str, age: str):
         self.__name = name
@@ -36,11 +38,12 @@ class Person:
 
 p = Person('meet', 23)
 
-print(p.name)
+print(p.name)   # act as a getter method
 print(p.age)
 
-p.name = 'dhyey'
+p.name = 'dhyey'    # act as a setter method
 p.age = 24
 
 # print(p.__dict__)
-print(Person.__dict__)
+# print(Person.__dict__)
+pprint(Person.__dict__)
