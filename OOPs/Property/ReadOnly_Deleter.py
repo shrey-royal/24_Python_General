@@ -33,11 +33,16 @@ class Garba:
     def team_name(self) -> str:
         return self.__team_name
     
+    @team_name.deleter
+    def team_name(self) -> None:
+        del self.__team_name
+    
 team = Garba("Arin", 20, "Professional", "Maro Chand", "White", "Disco Garba")
 
 # print(team.__dict__)
 pprint(team.__dict__)   # it only shows the used made attributes
 
 pprint(Garba.__dict__)  # it shows the class attributes and methods
-    
-# deleter to be continued...
+
+del team.team_name
+pprint(team.__dict__)  # it shows the class attributes and methods
