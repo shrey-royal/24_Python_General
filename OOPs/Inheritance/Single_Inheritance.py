@@ -1,26 +1,26 @@
 class School:
     def __init__(self, name: str, grade: int) -> None:
-        self._name = name
-        self._grade = grade
+        self.name = name
+        self.grade = grade
 
     def displaySchoolDetails(self) -> None:
-        print(f"School Name: {self._name}")
-        print(f"Grade: {self._grade}")
+        print(f"School Name: {self.name}")
+        print(f"Grade: {self.grade}")
 
 class Student (School): # student class gets inherited by school class
     
     def __init__(self, schoolName: str, grade: int, name: str, rollno: int, marks: int, fees: float) -> None:
-        School.__init__(self, schoolName, grade)   # calling parent class' constructor
-        self.__name = name
-        self.__rollno = rollno
-        self.__marks = marks
-        self.__fees = fees
+        super().__init__(schoolName, grade)   # calling parent class' constructor
+        self.name = name
+        self.rollno = rollno
+        self.marks = marks
+        self.fees = fees
 
     def displayStudentDetails(self) -> None:
-        print(f"Student Name: {self.__name}")
-        print(f"Roll No: {self.__rollno}")
-        print(f"Marks: {self.__marks}")
-        print(f"Fees: {self.__fees}")
+        print(f"Student Name: {self.name}")
+        print(f"Roll No: {self.rollno}")
+        print(f"Marks: {self.marks}")
+        print(f"Fees: {self.fees}")
 
     def showDetails(self):
         print("School Details: ")
