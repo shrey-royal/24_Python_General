@@ -51,8 +51,7 @@ class Employee:
     
 class SalesEmployee(Employee):
     def __init__(self, name: str, salary: float, incentive: float) -> None:
-        self.name = name
-        self.salary = salary
+        super().__init__(name, salary)
         self.sales_incentive = incentive
 
     def get_pay(self) -> float: # Method Overriden
