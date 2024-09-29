@@ -1,7 +1,6 @@
 from fulltimeemployee import FullTimeEmployee
 from hourlyemployee import HourlyEmployee
 from payroll import Payroll
-from employee import Employee
 
 
 payroll = Payroll()
