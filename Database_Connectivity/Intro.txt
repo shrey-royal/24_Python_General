@@ -4,14 +4,35 @@ Q. How python and SQL will communicate with each other?
 A) For this we will need a connector which will convert python code into SQL statements and vice versa.
 
 Steps to connect to a database:
--> Load the driver class from the connector
--> create a connection with the database
--> create statements (SQL queries)
--> execute the statements
--> close the conection
+-> Connect with the MySQL Server
+-> Create a connection with the existing database or create a new database
+-> Create the SQL query to execute
+-> Execute the Query (return the data if the query returns anything)
+-> Close the connection
 
 Database Options:
 1. Oracle
 2. MySQL (recommended)
 3. PostgreSQL
 4. MongoDB (Schema-less DB)
+
+CRUD Operations performed on Database:
+1. Create/Insert Data
+2. Retrieve/Get Data (all/specific row)
+3. Update/Modify Data
+4. Delete/Remove Data
+
+
+To connect with the mysql server from out Termial/CMD:
+
+-> mysql -u root -p (enter the password "root")
+
+-- use the below step if youhaven'e created a database yet! otherwise skip this step
+-> CREATE DATABASE db_name; (change the db_name with the actual database name)
+
+-> USE db_name; (change the db_name with the actual database name)
+
+
+Now for the connector, we have python package installer (pip). to install the connector we have to type in a command in cmd.
+
+pip install mysql-connector-python
