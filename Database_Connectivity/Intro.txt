@@ -36,3 +36,39 @@ To connect with the mysql server from out Termial/CMD:
 Now for the connector, we have python package installer (pip). to install the connector we have to type in a command in cmd.
 
 pip install mysql-connector-python
+
+
+DB Queries:
+
+Create Table Query ->
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    age INT,
+    country VARCHAR(50)
+);
+
+Dummy Data to insert:
+INSERT INTO users (name, email, age, country)
+VALUES
+('Alice Smith', 'alice.smith@example.com', 25, 'USA'),
+('Bob Johnson', 'bob.johnson@example.com', 30, 'UK'),
+('Carol Williams', 'carol.williams@example.com', 22, 'Canada'),
+('David Brown', 'david.brown@example.com', 35, 'Australia'),
+('Emily Davis', 'emily.davis@example.com', 28, 'USA'),
+('Frank Wilson', 'frank.wilson@example.com', 33, 'Germany'),
+('Grace Lee', 'grace.lee@example.com', 26, 'South Korea'),
+('Henry Kim', 'henry.kim@example.com', 29, 'South Korea'),
+('Irene Thompson', 'irene.thompson@example.com', 27, 'Canada'),
+('Jack Garcia', 'jack.garcia@example.com', 31, 'Mexico'),
+('Karen Martinez', 'karen.martinez@example.com', 24, 'Argentina'),
+('Leo Robinson', 'leo.robinson@example.com', 34, 'France'),
+('Maria Clark', 'maria.clark@example.com', 36, 'Spain'),
+('Nick Lewis', 'nick.lewis@example.com', 32, 'UK'),
+('Olivia Walker', 'olivia.walker@example.com', 23, 'Australia'),
+('Paul Hall', 'paul.hall@example.com', 37, 'Germany'),
+('Quincy Allen', 'quincy.allen@example.com', 40, 'USA'),
+('Rachel Young', 'rachel.young@example.com', 21, 'USA'),
+('Steve Hernandez', 'steve.hernandez@example.com', 28, 'Mexico'),
+('Tina Scott', 'tina.scott@example.com', 22, 'Canada');
