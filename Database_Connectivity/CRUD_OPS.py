@@ -1,7 +1,8 @@
 import mysql.connector
 from mysql.connector import Error
+from mysql.connector.connection import MySQLConnection
 
-def connect_db():
+def connect_db() -> MySQLConnection:
     """Establish connection to MySQL"""
     try:
         connection = mysql.connector.connect(
@@ -20,7 +21,7 @@ def connect_db():
         print(f"Error while connecting to MySQL: {e}")
         return None
 
-def create_user(name, email, age, country):
+def create_user(name, email, age, country) -> None:
     connection = connect_db()
     if connection is None:
         return "Connection failed."
@@ -39,7 +40,7 @@ def create_user(name, email, age, country):
             cursor.close()
             connection.close()
 
-def read_users():
+def read_users() -> None:
     connection = connect_db()
     if connection is None:
         return "Connection failed."
@@ -61,8 +62,65 @@ def read_users():
             cursor.close()
             connection.close()
 
-def update_user(user_id, name=None, email=None, age=None):
-    pass
+def update_user(user_id: int, new_name: str=None, new_email: str=None, new_age=None, new_country: str=None) -> None:
+
+    connection = connect_db()
+    if connection is None:
+        return "Connection failed."
+    
+    try:
+        cursor = connection.cursor()
+        query = "SELECT * FROM users WHERE id = %s"
+        cursor.execute(query, (user_id,))
+        users = cursor.fetchone()
+        if users:
+            name = users[1]
+            email = users[2]
+            age = users[3]
+            country = users[4]
+
+            if (new_name != None):
+                name = new_name
+            if (new_email != None):
+                email = new_email
+            if (new_age != None):
+                age = new_age
+            if (new_country != None):
+                country = new_country
+            
+            query = "UPDATE users SET name=%s, email=%s, age=%s, country=%s WHERE id=%s"
+            cursor.execute(query, (name, email, age, country, user_id,))
+            connection.commit()
+        else:
+            print("No users found.")
+    except Error as e:
+        print(f"Failed to update user: {e}")
+        connection.rollback()
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+
+def get_user_by_id(user_id: int):
+    connection = connect_db()
+    if connection is None:
+        return "Connection failed."
+    
+    try:
+        cursor = connection.cursor()
+        query = "SELECT * FROM users WHERE id = %s"
+        cursor.execute(query, (user_id,))
+        users = cursor.fetchone()
+        if users:
+            print(users)
+        else:
+            print("No users found.")
+    except Error as e:
+        print(f"Failed to update user: {e}")
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
 
 def delete_user(user_id):
     connection = connect_db()
@@ -93,9 +151,10 @@ def menu():
         print("2. Read All User")
         print("3. Update User")
         print("4. Delete User")
-        print("5. Exit")
+        print("5. GetUserById")
+        print("6. Exit")
 
-        choice = int(input("Enter your choice (1-5): "))
+        choice = int(input("Enter your choice (1-6): "))
 
         match choice:
             case 1:
@@ -114,7 +173,26 @@ def menu():
                 read_users()
 
             case 3:
-                print("Soon!")
+                try:
+                    user_id = int(input("Enter user ID to update: "))
+                    name = input("Enter a new name or press '-' to skip: ")
+                    email = input("Enter a new email or press '-' to skip: ")
+                    age = input("Enter a new age or press '-' to skip: ")
+                    country = input("Enter a new country or press '-' to skip: ")
+                except ValueError:
+                    print("Invalid Data! Please enter valid data.")
+                    continue
+
+                if name == '-':
+                    name = None
+                if email == '-':
+                    email = None
+                if age == '-':
+                    age = None
+                if country == '-':
+                    country = None
+
+                update_user(user_id, name, email, age, country)
 
             case 4:
                 try:
@@ -126,11 +204,20 @@ def menu():
                 delete_user(user_id)
 
             case 5:
+                try:
+                    user_id = int(input("Enter user ID to get the user details: "))
+                except ValueError:
+                    print("Invalid user ID! Please enter a valid number.")
+                    continue
+
+                get_user_by_id(user_id)
+
+            case 6:
                 print("Exiting Program...")
                 break
 
             case _:
-                print("Invalid choice. Please enter a number between 1 and 5.")
+                print("Invalid choice. Please enter a number between 1 and 6.")
 
 if __name__ == "__main__":
     menu()
